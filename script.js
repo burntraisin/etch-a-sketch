@@ -12,3 +12,14 @@ container.style.display = "grid";
 container.style.backgroundColor = "pink";
 container.style.gridTemplateColumns = gridSize;
 container.style.gridTemplateRows = gridSize;
+
+// CHANGE COLOR ON HOVER
+
+for (let i = 0; i < canvasDimensions * canvasDimensions; i++) {
+    const gridChild = document.createElement("div");
+    gridChild.classList.toggle("grid-child");
+    container.appendChild(gridChild);
+    gridChild.addEventListener("mouseover", () => {
+        gridChild.classList.toggle("active");
+    });
+}
