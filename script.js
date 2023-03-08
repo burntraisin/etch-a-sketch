@@ -15,6 +15,7 @@ container.style.gridTemplateRows = gridSize;
 
 // CHANGE COLOR ON HOVER
 
+// Creates a div for each grid item and changes its color when mouseover
 for (let i = 0; i < canvasDimensions * canvasDimensions; i++) {
     const gridChild = document.createElement("div");
     gridChild.classList.toggle("grid-child");
@@ -23,3 +24,5 @@ for (let i = 0; i < canvasDimensions * canvasDimensions; i++) {
         gridChild.classList.toggle("active");
     });
 }
+
+// CANVAS SIZE
