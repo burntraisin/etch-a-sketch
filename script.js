@@ -33,7 +33,22 @@ const slider = document.querySelector(".slider");
 let canvasDimensions = document.querySelector(".slider").value;
 canvas(canvasDimensions);
 
+const sliderContainer = document.querySelector(".slider-container");
+const sliderContent = document.createElement("div");
+sliderContent.textContent = canvasDimensions + " x " + canvasDimensions;
+sliderContainer.insertBefore(sliderContent, slider);
+
 slider.onchange = function() {
     let canvasDimensions = document.querySelector(".slider").value;
     canvas(canvasDimensions);
+
+    sliderContent.textContent = canvasDimensions + " x " + canvasDimensions;
 }
+
+const clear = document.querySelector(".clear");
+clear.addEventListener ("click", () => {
+    let canvasDimensions = document.querySelector(".slider").value;
+    canvas(canvasDimensions);
+
+    sliderContent.textContent = canvasDimensions + " x " + canvasDimensions;
+})
