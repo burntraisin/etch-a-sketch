@@ -1,3 +1,40 @@
+@font-face {
+    font-family: "noto-sans-black";
+    src: url(fonts/NotoSansJP-Black.otf);
+}
+
+@font-face {
+    font-family: "noto-sans-regular";
+    src: url(fonts/NotoSansJP-Regular.otf);
+}
+
+@font-face {
+    font-family: "noto-sans-medium";
+    src: url(fonts/NotoSansJP-Medium.otf);
+}
+
+body {
+    font-family: "noto-sans-regular";
+    text-align: center;
+    background-color: #ffcccb;
+}
+
+h1 {
+    font-family: "noto-sans-black";
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
 .grid-container {
     display: flex;
     justify-content: center;
@@ -5,4 +42,10 @@
 
 .active {
     background-color: black;
+}
+
+.footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }

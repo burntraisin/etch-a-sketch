@@ -4,8 +4,8 @@ function canvas(canvasDimensions) {
     let gridUnitSize = "1fr ";
     let gridSize = gridUnitSize.repeat(canvasDimensions).trimEnd(); // 1fr per 1 unit of canvasDimensions
 
-    container.style.width = "600px";
-    container.style.height = "600px";
+    container.style.width = "500px";
+    container.style.height = "500px";
     container.style.display = "grid";
     container.style.backgroundColor = "pink";
     container.style.gridTemplateColumns = gridSize;
@@ -38,17 +38,18 @@ const sliderContent = document.createElement("div");
 sliderContent.textContent = canvasDimensions + " x " + canvasDimensions;
 sliderContainer.insertBefore(sliderContent, slider);
 
+slider.onmousemove = function() {
+    let canvasDimensions = document.querySelector(".slider").value;
+    sliderContent.textContent = canvasDimensions + " x " + canvasDimensions;
+}
+
 slider.onchange = function() {
     let canvasDimensions = document.querySelector(".slider").value;
     canvas(canvasDimensions);
-
-    sliderContent.textContent = canvasDimensions + " x " + canvasDimensions;
 }
 
 const clear = document.querySelector(".clear");
 clear.addEventListener ("click", () => {
     let canvasDimensions = document.querySelector(".slider").value;
     canvas(canvasDimensions);
-
-    sliderContent.textContent = canvasDimensions + " x " + canvasDimensions;
 })
