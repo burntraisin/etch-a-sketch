@@ -7,7 +7,7 @@ function canvas(canvasDimensions) {
     container.style.width = "500px";
     container.style.height = "500px";
     container.style.display = "grid";
-    container.style.backgroundColor = "#f5e8d1";
+    container.style.backgroundColor = "#ABBFCF";
     container.style.gridTemplateColumns = gridSize;
     container.style.gridTemplateRows = gridSize;
 
@@ -33,14 +33,16 @@ const slider = document.querySelector(".slider");
 let canvasDimensions = document.querySelector(".slider").value;
 canvas(canvasDimensions);
 
-const sliderContainer = document.querySelector(".slider-container");
+const sliderContainer = document.querySelector(".slider-controls");
 const sliderContent = document.createElement("div");
 sliderContent.textContent = canvasDimensions + " x " + canvasDimensions;
+sliderContent.style.fontSize = "20px";
 sliderContainer.insertBefore(sliderContent, slider);
 
 slider.onmousemove = function() {
     let canvasDimensions = document.querySelector(".slider").value;
     sliderContent.textContent = canvasDimensions + " x " + canvasDimensions;
+    sliderContent.style.fontSize = "20px";
 }
 
 slider.onchange = function() {

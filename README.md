@@ -7,3 +7,5 @@ This is a sketchpad for TOP's Foundations Course.
 * CSS Grid
 * str.repeat()
 * str.trimEnd()
+* Hover animation
+* Range slider
