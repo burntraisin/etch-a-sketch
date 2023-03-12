@@ -7,7 +7,7 @@ function canvas(canvasDimensions) {
     container.style.width = "500px";
     container.style.height = "500px";
     container.style.display = "grid";
-    container.style.backgroundColor = "pink";
+    container.style.backgroundColor = "#f5e8d1";
     container.style.gridTemplateColumns = gridSize;
     container.style.gridTemplateRows = gridSize;
 
